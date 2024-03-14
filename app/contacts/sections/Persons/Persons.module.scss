@@ -1,0 +1,120 @@
+.persons {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-top: 176px;
+  column-gap: 200px;
+
+  &-left-to-right {
+    animation: person-left-to-right-animation 0.75s ease-in-out 0.5s backwards;
+  }
+
+  &-right-to-left {
+    animation: person-right-to-left-animation 0.75s ease-in-out 0.5s backwards;
+  }
+
+  &__person {
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+
+    &-fullname {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 32px;
+      color: #ff563f;
+    }
+
+    &-text {
+      font-size: 32px;
+      font-weight: 200;
+      line-height: 48px;
+      margin-top: 8px;
+    }
+
+    &-contacts {
+      display: flex;
+      column-gap: 32px;
+      margin-top: 24px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    &-email {
+      color: #ff563f;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .persons {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    gap: 56px;
+
+    &-left-to-right {
+      animation: person-left-to-right-animation 0.75s ease-in-out 0.5s backwards;
+    }
+
+    &-right-to-left {
+      animation: person-right-to-left-animation 0.75s ease-in-out 0.5s backwards;
+    }
+
+    &__person {
+      width: 328px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 48px;
+
+      &-photo {
+        width: 328px;
+        height: 328px;
+      }
+
+      &-fullname {
+        font-size: 15px;
+      }
+
+      &-text {
+        font-size: 24px;
+        line-height: 36px;
+      }
+
+      &-contacts {
+        display: flex;
+        column-gap: 32px;
+        margin-top: 24px;
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      &-email {
+        color: #ff563f;
+      }
+    }
+  }
+}
+
+@keyframes person-left-to-right-animation {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes person-right-to-left-animation {
+  from {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

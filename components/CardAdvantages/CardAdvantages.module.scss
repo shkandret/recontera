@@ -1,0 +1,88 @@
+.advantages__card {
+  position: relative;
+  display: flex;
+  width: 1344px;
+  height: 592px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background-color: #191423;
+  border-radius: 48px;
+  justify-content: center;
+  align-items: center;
+
+  &-text {
+    width: 640px;
+    margin-left: 112px;
+  }
+
+  &-text-first {
+    font-size: 32px;
+    font-weight: 200;
+    line-height: 40px;
+  }
+
+  &-text-second {
+    font-size: 18px;
+    line-height: 32px;
+    margin-top: 40px;
+    margin-bottom: 56px;
+  }
+
+  &-num {
+    position: absolute;
+    bottom: 34px;
+    right: 52px;
+    font-weight: 200;
+    font-size: 48px;
+  }
+
+  &-image {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .advantages__card {
+    justify-content: flex-start;
+    width: 328px;
+    height: 632px;
+    z-index: 2;
+    overflow: hidden;
+
+    &-text {
+      width: 280px;
+      height: 592px;
+      margin-top: 40px;
+      margin-left: 24px;
+    }
+
+    &-text-first {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &-text-second {
+      font-size: 15px;
+      line-height: 24px;
+      margin-top: 32px;
+    }
+
+    &-button {
+      position: absolute;
+      bottom: 30px;
+    }
+
+    &-num {
+      bottom: 36px;
+      right: 24px;
+    }
+
+    &-image {
+      position: absolute;
+      z-index: 0;
+      left: 50px;
+      z-index: -1;
+      opacity: 0.35;
+    }
+  }
+}

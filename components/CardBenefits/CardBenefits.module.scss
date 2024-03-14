@@ -1,0 +1,30 @@
+.benefits__card {
+  display: flex;
+  border-radius: 16px;
+  background-color: #120421;
+  width: 412px;
+  height: 96px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+
+  &-text {
+    font-size: 32px;
+    font-weight: 200;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .benefits__card {
+    width: 328px;
+    height: 80px;
+
+    &-text {
+      font-size: 24px;
+    }
+  }
+}

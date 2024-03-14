@@ -1,0 +1,24 @@
+.tooltip {
+  position: absolute;
+  background-color: #120421;
+  color: #fff;
+  padding: 12px;
+  border-radius: 4px;
+  white-space: normal;
+  z-index: 9999;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  width: 400px;
+
+  &-container {
+    position: relative;
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .tooltip {
+    width: 278px;
+  }
+}
